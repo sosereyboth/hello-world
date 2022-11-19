@@ -10,6 +10,9 @@ pipeline {
     stage('Log') {
       steps {
         sh '''ls -la &&
+whoami &&
+echo $MAVEN_HOME &&
+echo $M2_HOME &&
 mvn -version'''
       }
     }
