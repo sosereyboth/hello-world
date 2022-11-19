@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('test') {
+    stage('copy build artifact') {
       steps {
-        sh 'ssh root@172.31.45.49'
+        sshPublisher()
       }
     }
 
