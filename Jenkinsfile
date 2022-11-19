@@ -7,12 +7,10 @@ pipeline {
       }
     }
 
-    stage('Log') {
+    stage('Maven Build') {
       steps {
-        sh '''ls -la &&
-export MAVEN_HOME=/opt/maven/apache-maven &&
-export PATH=$PATH:$MAVEN_HOME/bin &&
-mvn --version'''
+        sh '''java --version &&
+mvn -version'''
       }
     }
 
