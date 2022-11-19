@@ -10,10 +10,9 @@ pipeline {
     stage('Log') {
       steps {
         sh '''ls -la &&
-whoami &&
-echo $MAVEN_HOME &&
-echo $M2_HOME &&
-mvn -version'''
+export MAVEN_HOME=/opt/maven &&
+export PATH=$PATH:$MAVEN_HOME/bin &&
+mvn --version'''
       }
     }
 
