@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('copy build artifact') {
+    stage('Checkout Code') {
       steps {
-        sshPublisher()
+        git(url: 'https://github.com/sosereyboth/hello-world.git', branch: 'master')
       }
     }
 
