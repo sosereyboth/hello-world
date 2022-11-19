@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'java --version'
+        sh 'ssh root@172.31.45.49'
       }
     }
 
